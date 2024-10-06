@@ -1,0 +1,203 @@
+@import url("reset.css");
+
+
+:root {
+    /* padding */
+    --window-padding: 12px 12px 16px 12px;
+
+    /* Monochrome */
+    --monochrome-1: #FFF;
+    --monochrome-2: rgb(255 255 255 / 50%);
+    --monochrome-3: #F0F0F0;
+    --monochrome-4: #BCBCBC;
+    --monochrome-5: #4D4D4D;
+    --monochrome-6: #4F403B;
+    --monochrome-7: #4D4D4D;
+    --monochrome-7-6: rgb(26 23 23 / 60%);
+    --monochrome-8: #4F403B;
+    --monochrome-9: #1A1717;
+    --monochrome-10: #000;
+
+    /* Indents */
+    --indents-64: 64px;
+    --indents-56: 56px;
+    --indents-48: 48px;
+    --indents-40: 40px;
+    --indents-32: 32px;
+    --indents-24: 24px;;
+    --indents-16: 16px;
+    --indents-12: 12px;
+    --indents-8: 8px;
+    --indents-4: 4px;
+
+    /* Purple */
+    --purple-7: #B59DEE;
+    --purple-6: #A690FF;
+    --purple-5: #7144DE;
+    --purple-4: #552CB8;
+    --purple-3: #3C159C;
+    --purple-2: #25017D;
+    --purple-1: #0D0627;
+
+    /* Pink */
+    --pink-7: #FFC7F3;
+    --pink-6: #FFC9DB;
+    --pink-5: #FC7DA8;
+    --pink-4: #FF6BC3;
+    --pink-3: #F56093;
+    --pink-2: #C83A6A;
+    --pink-1: #1B0620;
+
+    /* Beige */
+    --beige-9: #FFF6E8;
+    --beige-8: #F4E8D5;
+    --beige-7: #F1DFC3;
+    --beige-6: #EAD1AA;
+    --beige-5: #DABF97;
+    --beige-4: #CFB388;
+    --beige-3: #AE8C56;
+    --beige-2: #967E5A;
+    --beige-1: #6D5B3E;
+
+    /* Green */
+    --green-7: #D9F7C7;
+    --green-6: #AAF288;
+    --green-5: #90D470;
+    --green-4: #4AE47F;
+    --green-3: #2AEB60;
+    --green-2: #6FC746;
+    --green-1: #039700;
+
+    /* Red */
+    --red-1: #FF3C3C;
+
+    /* Blue */
+    --blue-14: #C0CFFF;
+    --blue-13: #AEE3FF;
+    --blue-12: #83CEF6;
+    --blue-11: #40F4FF;
+    --blue-10: #57C4FF;
+    --blue-9: #3AA7E1;
+    --blue-8: #5577EF;
+    --blue-7: #1078FF;
+    --blue-6: #3A57BC;
+    --blue-5: #223C98;
+    --blue-4: #74879D;
+    --blue-3: #36475B;
+    --blue-2: #081827;
+    --blue-1: #040C27;
+
+    /* Yellow */
+    --yellow-6: #FFEDC0;
+    --yellow-5: #FFD979;
+    --yellow-4: #FFE500;
+    --yellow-3: #EDD400;
+    --yellow-2: #DBB759;
+    --yellow-1: #FFA030;
+
+    /* container */
+    --container-width: 100%;
+    --container-max-width: 1440px;
+
+    /* Text color */
+    --text-color: var(--monochrome-10);
+
+    /* Background colors */
+    --bg-color: var(--monochrome-1);
+
+    /* Minimum height for main */
+    --main-min-height: calc(100vh - 60px);
+    --transition-time: 0.3s ease-out;
+
+    color-scheme: light dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+}
+
+html, body {
+    scrollbar-gutter: stable;
+}
+
+body {
+    background-color: var(--monochrome-1);
+    color: var(--text-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: var(--main-min-height);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    padding: 0 60px;
+    width: var(--container-width);
+    z-index: 2;
+}
+
+.mt-4 {
+    margin-top: var(--indents-4, 4px);
+}
+
+.mt-8 {
+    margin-top: var(--indents-8, 8px);
+}
+
+.mt-12 {
+    margin-top: var(--indents-12, 12px);
+}
+
+.mt-16 {
+    margin-top: var(--indents-16, 16px);
+}
+
+.mt-24 {
+    margin-top: var(--indents-24, 24px);
+}
+
+.mt-32 {
+    margin-top: var(--indents-32, 32px);
+}
+
+.mt-40 {
+    margin-top: var(--indents-40, 40px);
+}
+
+.mt-48 {
+    margin-top: var(--indents-48, 48px);
+}
+
+.mt-56 {
+    margin-top: var(--indents-56, 56px);
+}
+
+.mt-64 {
+    margin-top: var(--indents-64, 64px);
+}
+
+/* Media Queries */
+
+/* Tablet styles */
+
+@media (width <= 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+}
+
+/* Mobile styles */
+@media (width <= 767px) {
+    .container {
+        padding: 0 20px;
+    }
+}
