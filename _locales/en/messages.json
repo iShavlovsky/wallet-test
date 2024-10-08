@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Test Wallet",
+    "description": "The name of the application"
+  },
+  "sName": {
+    "message": "Test",
+    "description": "The application"
+  },
+  "appDescription": {
+    "message": "The game-changing wallet for Ethereum and all EVM chains",
+    "description": "The description of the application"
+  }
+}

@@ -1,3 +1,4 @@
+import { crx } from '@crxjs/vite-plugin';
 import react from '@vitejs/plugin-react';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
@@ -5,10 +6,18 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
+import { manifest } from './manifest.ts';
+
 // https://vitejs.dev/config/
 export default defineConfig({
+    server: {
+        port: 5173,
+        hmr: {
+            protocol: 'ws',
+            host: 'localhost'
+        }
+    },
     publicDir: 'public',
-    base: '/wallet-test/',
     build: {
         outDir: 'dist',
         minify: 'esbuild',
@@ -45,6 +54,7 @@ export default defineConfig({
     assetsInclude: ['**/*.webp', '**/*.png', '**/*.woff2', '**/*.jpeg'],
     plugins: [
         react(),
+        crx({ manifest }),
         svgr({
             include: '**/*.svg',
             exclude: '**/*.svg?bg',

@@ -1,4 +1,4 @@
-@import url("reset.css");
+/*@import url("reset.css");*/
 
 
 :root {
@@ -106,7 +106,6 @@
     --bg-color: var(--monochrome-1);
 
     /* Minimum height for main */
-    --main-min-height: calc(100vh - 60px);
     --transition-time: 0.3s ease-out;
 
     color-scheme: light dark;
@@ -114,6 +113,10 @@
     -moz-osx-font-smoothing: grayscale;
     font-synthesis: none;
     text-rendering: optimizelegibility;
+}
+html {
+    width: 400px;
+    height: auto;
 }
 
 html, body {
@@ -128,7 +131,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    min-height: var(--main-min-height);
+    min-height: 500px;
 }
 
 section {

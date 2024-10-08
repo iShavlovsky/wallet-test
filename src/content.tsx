@@ -4,15 +4,17 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 
-import App from './App.tsx';
+import AppDapp from './App-dapp.tsx';
 
-const container = document.getElementById('root') as HTMLElement;
+const container = document.createElement('div') as HTMLElement;
+container.id = 'crx-root';
+document.body.appendChild(container);
 const root = createRoot(container);
 
 root.render(
     <StrictMode>
         <HashRouter>
-            <App />
+            <AppDapp />
         </HashRouter>
     </StrictMode>
 );

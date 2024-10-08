@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <section style={{ padding: '50px' }}>
             <div className="container">
-                <h1>Ext</h1>
+                <h1>Dapp</h1>
                 <figure>
                     <DoneIcon />
                 </figure>
